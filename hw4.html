@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="style.css" rel ="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#next").click(function(){
+    $("tr").each(function(i){
+       
+
+         $("td").closest("tr").next().addClass("highlight");
+      });
+    //$(".highlight").removeClass("highlight");
+    //$(this).parent().addClass("highlight");
+    });
+      
+
+});
+$(document).ready(function(){
+    $("#clear").click(function(){
+        $("tr").each(function (i){
+            $("td").parent("tr").next().removeClass("highlight");
+        
+    });
+
+});
+});
+
+</script>
+</head>
+<body>
+
+<table>
+
+    <tr id = "next0">
+        <th>
+            First Name
+        </th>
+        <th>
+            Last Name
+        </th>
+        <th>
+            Email
+        </th>
+        <th>
+            Phone
+        </th>
+        <th>
+            Office
+        </th>
+
+    </tr>
+    <tr id = "next1">
+        <td>
+            John
+        </td>
+        <td>
+            Smith
+        </td>
+        <td>
+            jsmith@sar.com 
+        </td>
+        <td>
+            +30 210 1234567 
+        </td>
+        <td>
+            PN 514
+        </td>
+    </tr>
+    <tr id = "next2">
+        <td>
+            Maria
+        </td>
+        <td>
+            Carras
+        </td>
+        <td>
+            mcarras@jsu.edu
+        </td>
+        <td>
+            +30 210 7654321
+        </td>
+        <td>
+            PM 413
+        </td>
+    </tr>
+    <tr id = "next3">
+        <td>
+            Afroditi
+        </td>
+        <td>
+            Makri
+        </td>
+        <td>
+            amakri@hughes.edu 
+        </td>
+        <td>
+            +30 2310 123456 
+        </td>
+        <td>
+            PJ 717
+        </td>
+    </tr>
+    <tr id = "next4">
+        <td>
+            Helen
+        </td>
+        <td>
+            Antypas
+        </td>
+        <td>
+            hantypas@bdg.com 
+        </td>
+        <td>
+            +30 2310 654321
+        </td>
+        <td>
+            Pk 614
+        </td>
+    </tr>
+</table>
+
+<button id = "next"> next</button><br>
+<button id = "clear"> Clear </button>
+
+</body>
+</html>
